@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+</head>
+
+<body>
+    <div class="judul">
+        <h1 class="judulnya">EVENT REGISRATION FORM</h1>
+    </div>
+    <div class="isi">
+        <form>
+            <div id="name">
+                <h2 class="name">Name</h2>
+                <input class="fn" type="text" name="f_n"><br>
+                <label class="fl">first name</label>
+                <input class="ln" type="text" name="l_n"><br>
+                <label class="ll">last name</label>
+            </div>
+
+            <h2 class="name">Company</h2>
+            <input class="comp" type="text" name="cmp">
+
+            <h2 class="name">Email</h2>
+            <input class="email" type="text" name="email">
+
+            <h2 class="name">Phone</h2>
+            <input class="code" type="text" name="a_c"><br>
+            <label class="ac">Area Code</label>
+            <input class="number" type="text" name="phone"><br>
+            <label class="pn">Phone Number</label>
+
+            <h2 class="sub">Subject</h2>
+            <select class="opt" name="subject">
+                <option disabled="disabled" selected="selected">Choose Option</option>
+                <option>Subject 1</option>
+                <option>Subject 2</option>
+                <option>Subject 3</option>
+            </select>
+
+            <h2 id="cust">Are you an existing customer?</h2><br>
+            <input class="radioc" type="radio" checked /> Yes
+            <input class="radioc" type="radio" /> No
+            <br />
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+
+    <script src="global.js"></script>
+</body>
+
+</html>
