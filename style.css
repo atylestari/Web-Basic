@@ -1,0 +1,560 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+}
+
+/* 
+==============
+    HOME
+==============
+*/
+#home {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url(img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 10px 100px;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+nav.bar {
+  background: rgba(0, 0, 0, 0.4);
+  height: 70px;
+}
+
+nav a img {
+  position: relative;
+}
+
+nav a img {
+  width: 50px;
+  transition: 0.5s;
+}
+
+nav ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 30px;
+  position: relative;
+}
+
+nav ul li a {
+  line-height: 50px;
+  color: #fff;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #f76d0b;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+button {
+  color: #fbfcfd;
+  padding: 10px 25px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 
+=================
+    Bubbles
+=================
+ */
+.bubbles {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: -70px;
+}
+
+.bubbles img {
+  width: 50px;
+  animation: bubble 7s linear infinite;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80vh);
+    opacity: 0;
+  }
+}
+
+.bubbles img:nth-child(1) {
+  animation-delay: 2s;
+  width: 25px;
+}
+.bubbles img:nth-child(2) {
+  animation-delay: 1s;
+}
+.bubbles img:nth-child(3) {
+  animation-delay: 3s;
+  width: 25px;
+}
+.bubbles img:nth-child(4) {
+  animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5) {
+  animation-delay: 3s;
+}
+.bubbles img:nth-child(6) {
+  animation-delay: 6s;
+  width: 20px;
+}
+.bubbles img:nth-child(7) {
+  animation-delay: 7s;
+  width: 35px;
+}
+
+/* 
+=============
+    JUMP
+=============
+*/
+.jump1 {
+  margin: 9rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.jumping1 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 8em;
+}
+
+.jumping1 span {
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.2);
+}
+
+.jumping1 span::before,
+.jumping1 span::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.jumping1 span::before {
+  z-index: 10;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 1);
+  animation: animate1 1s ease-in-out infinite;
+}
+
+@keyframes animate1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, -30px);
+  }
+}
+
+h2 span::after {
+  z-index: 9;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.6);
+  animation: animate2 1s ease-in-out infinite;
+}
+
+@keyframes animate2 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(15px, -15px);
+  }
+}
+
+.jump2 {
+  margin: 3rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.jumping2 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 8em;
+}
+
+.jumping2 span {
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.2);
+}
+
+.jumping2 span::before,
+.jumping2 span::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.jumping2 span::before {
+  z-index: 10;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 1);
+  animation: animate2 1s ease-in-out infinite;
+}
+
+@keyframes animate2 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, -30px);
+  }
+}
+
+h2 span::after {
+  z-index: 9;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.6);
+  animation: animate3 1s ease-in-out infinite;
+}
+
+@keyframes animate3 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(15px, -15px);
+  }
+}
+
+h2 span:nth-child(1)::before,
+h2 span:nth-child(1)::after {
+  animation-delay: 0s;
+}
+
+h2 span:nth-child(2)::before,
+h2 span:nth-child(2)::after {
+  animation-delay: 0.1s;
+}
+
+h2 span:nth-child(3)::before,
+h2 span:nth-child(3)::after {
+  animation-delay: 0.2s;
+}
+
+h2 span:nth-child(4)::before,
+h2 span:nth-child(4)::after {
+  animation-delay: 0.3s;
+}
+
+h2 span:nth-child(5)::before,
+h2 span:nth-child(5)::after {
+  animation-delay: 0.4s;
+}
+
+h2 span:nth-child(6)::before,
+h2 span:nth-child(6)::after {
+  animation-delay: 0.5s;
+}
+
+h2 span:nth-child(7)::before,
+h2 span:nth-child(7)::after {
+  animation-delay: 0.6s;
+}
+
+/* 
+===============
+    ABOUT
+===============
+*/
+#about {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.box {
+  margin: 5rem;
+}
+
+#about span {
+  color: #f76d0b;
+  font-size: 40px;
+}
+
+#about h2 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+#about p {
+  font-size: 25px;
+  text-align: center;
+}
+
+/* 
+=============
+   EVENTS
+=============
+*/
+#events {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+#events h2 {
+  font-size: 50px;
+  margin-left: 330px;
+  margin-bottom: 2em;
+}
+
+.countBox {
+  margin-left: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - 450px);
+}
+
+.countBox h3 {
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+.countBox .count {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.226);
+  width: auto;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countBox .count div {
+  position: relative;
+  width: 100px;
+  text-align: center;
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: 500;
+  margin: 0 15px;
+  margin-top: -25px;
+}
+
+.countBox .count div::before {
+  content: "text";
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  color: #fff;
+  font-size: 0.35em;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.countBox .count div#day::before {
+  content: "Days";
+}
+
+.countBox .count div#hour::before {
+  content: "hours";
+}
+
+.countBox .count div#minute::before {
+  content: "minutes";
+}
+
+.countBox .count div#second::before {
+  content: "seconds";
+}
+
+.countBox .count div#second,
+.countBox .count div#second::before {
+  color: #f76d0b;
+}
+
+/* 
+===============
+    SERVICES
+===============
+*/
+#services {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+#services h2 {
+  font-size: 50px;
+  margin-bottom: 2em;
+  margin-left: 400px;
+}
+
+.isi {
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.isi h3 {
+  font-size: 3.5em;
+}
+
+.isi h4 {
+  margin: 1em;
+  font-size: 2em;
+}
+
+.content1 {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.content2 {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* 
+===============
+    FEEDBACK
+===============
+*/
+#feedback {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+#feedback h2 {
+  font-size: 50px;
+  margin-bottom: 50px;
+  margin-left: 95px;
+}
+
+.testi h3,
+.testi p {
+  margin: 0;
+}
+
+.testi {
+  text-align: center;
+  padding: 30px 50px;
+  width: 330px;
+  height: 400px;
+  background-color: #333;
+}
+
+/* 
+===============
+    FOOTER
+===============
+*/
+.copyright {
+  padding: 8px 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.copyright p {
+  color: #333;
+}
+
+.copyright a {
+  color: #f76d0b;
+  font-weight: 500;
+  text-decoration: none;
+}
