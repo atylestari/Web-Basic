@@ -1,7 +1,5 @@
 # WEB Mentoring - Level Basic
 
-By Udacoding
-
 ---
 
 Repository yang dibuat untuk pengumpulan tugas mentoring.
